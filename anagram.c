@@ -8,8 +8,8 @@ char tolower(char a){
     }
 }
 void anagram(char a[],char b[]){
-    char a1[26]={0};
-    char b1[26]={0};
+    int a1[26]={0};
+    int b1[26]={0};
     int i=0;
     int check=0;
     while(a[i]!=NULL){
@@ -20,7 +20,7 @@ void anagram(char a[],char b[]){
     i=0;
     while(b[i]!=NULL){
         b[i]=tolower(b[i]);
-        b1[b[i]-'a']=b1[a[i]-'a']+1;
+        b1[b[i]-'a']=b1[b[i]-'a']+1;
         i++;
     }
     for(i=0;i<26;i++){
